@@ -22,7 +22,6 @@ func setMovingDirection(boolRightMover):
 
 func _physics_process(delta):
 	if $RayCast2D.is_colliding():
-		print($RayCast2D.get_collider().name)
 		if canAttack:
 			canAttack = false
 			$FireTimer.start()
@@ -33,7 +32,7 @@ func _physics_process(delta):
 			#Adding the explosion on the level.
 			get_parent().add_child(fire)
 			fire.position = get_position()
-			fire.position.x += 40
+			fire.position.x += 70
 			fire.animateExplosion()
 	else:		
 		motion.x = 1 *  SPEED

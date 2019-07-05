@@ -49,4 +49,5 @@ collide_with_areas = true
 [node name="FireTimer" type="Timer" parent="."]
 process_mode = 0
 wait_time = 3.0
+
 [connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]

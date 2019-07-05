@@ -15,7 +15,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	#fall(delta)
+	fall(delta)
 	movement()
 	checkCeiling()
 
@@ -36,7 +36,20 @@ func movement():
 	#reference -> Game Endevour platformer mechanics
 	motion.x = -(int(Input.is_action_pressed("left"))) + (int(Input.is_action_pressed("right")))
 	motion.x = motion.x * SPEED
+	
+	# Jumping
+	if Input.is_action_pressed("jump"):
+		if is_on_floor():
+			motion.y = -JUMP
+			
+	# IF pressed down the user will fall through passthrough
+	if Input.is_action_pressed("down"):
+		if is_on_floor():
+			# Turning collision off for passthrough platforms
+			set_collision_mask_bit(1,false)
+		
 	move_and_slide(motion,UP)
+	
 
 	#Whether to flip the animation or not
 	if motion.x > 0:
@@ -62,3 +75,7 @@ func movement():
 
 func _on_FireTimer_timeout():
 	canshoot = true
+
+func _on_Area2D_lower_body_exited(body):
+	if body.name == "FloatingPlatform":
+		set_collision_mask_bit(1,true)

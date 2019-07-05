@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://graphics/platforms3.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="GameTiles" type="Node2D"]
+
+[node name="tile" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="tile"]
+editor/display_folded = true
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tile/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="tile2" type="Sprite" parent="."]
+position = Vector2( 44.5349, 0.263517 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 32, 32 )
+
+[node name="tile3" type="Sprite" parent="."]
+position = Vector2( 81.4277, -0.527044 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="tile4" type="Sprite" parent="."]
+position = Vector2( 117.573, -0.219683 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 32, 32, 32 )
+
+[node name="tile5" type="Sprite" parent="."]
+position = Vector2( -1.37433, 36.9705 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 32, 32 )
+
+[node name="tile6" type="Sprite" parent="."]
+position = Vector2( 45.3439, 35.7411 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 64, 32, 32 )
+
+[node name="tile7" type="Sprite" parent="."]
+position = Vector2( 83.1488, 35.1264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 32, 32 )
+
+[node name="tile8" type="Sprite" parent="."]
+position = Vector2( 128.33, 34.5117 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 32, 32 )
+
+[node name="tile9" type="Sprite" parent="."]
+position = Vector2( 19.8333, 80.9226 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 96, 32, 32 )
+
+[node name="tile10" type="Sprite" parent="."]
+position = Vector2( 63.478, 81.5373 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="tile11" type="Sprite" parent="."]
+position = Vector2( 105.279, 81.2299 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="tile12" type="Sprite" parent="."]
+position = Vector2( 173.904, -6.30843 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 32, 32 )
+
+[node name="tile13" type="Sprite" parent="."]
+position = Vector2( 176.066, 25.5728 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
+
+[node name="tile14" type="Sprite" parent="."]
+position = Vector2( 211.537, 24.8181 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 64, 0, 32, 32 )
+
+[node name="tile15" type="Sprite" parent="."]
+position = Vector2( 180.971, 53.8743 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 96, 32, 32, 32 )
+

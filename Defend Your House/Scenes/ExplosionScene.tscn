@@ -35,6 +35,7 @@ tracks/1/keys = {
 }
 
 [node name="ExplosionScene" type="Sprite"]
+scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 1 )
 hframes = 7
 frame = 6
