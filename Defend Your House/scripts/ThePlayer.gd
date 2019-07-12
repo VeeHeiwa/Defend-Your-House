@@ -1,5 +1,23 @@
 extends KinematicBody2D
 
+
+###########################################
+# Jumping through floating platforms:
+
+#A static body needs to be on a seperate layer, mostly
+#called "Floating Body". The Player usual collision should 
+#not mask that collision layer. Add a seperate Area2D to the 
+#player and have it's collision to mask the same layer as the 
+#floating Body. Mark the FloatingBody as one way collision.
+#and connect the player's Area2D signal of Body exited to the 
+#main script of the player. and turn the maskbit on for the 
+#floatingplatform body layer. This time on main collisionbody.
+# 								-- Veeheiwa
+###########################################
+
+
+
+
 #Required Variables
 export var SPEED = 200
 export var JUMP = 700
@@ -69,7 +87,6 @@ func movement():
 			fire.set_direction($Sprite.flip_h)
 			hasAttacked = true
 		
-			
 	$Sprite/PlayerAnimationPlayer.update_animation(motion,hasAttacked)
 
 
